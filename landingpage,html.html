@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: pink;
+    }
+	h1{
+	  background-color: #ADD8E6;}
+
+    #navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: black;
+      padding: 15px 0;
+      text-align: center;
+      transition: background-color 0.3s;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+    }
+
+    #navbar a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      margin: 0 10px;
+      font-size: 18px;
+      border-radius: 10px;
+      transition: color 0.3s, background-color 0.3s;
+    }
+
+    #navbar a:hover {
+      color: blue; 
+      background-color: white; /* Change background color when hovering */
+    }
+
+   #navbar a.active {
+      background-color: pink; /* Change background color for active link */
+    }
+  </style>
+</head>
+<body>
+
+<div id="navbar">
+  <a href="#" class="active">Home</a>
+  <a href="#">Adopt a Pet</a>
+  <a href="#">Find a Shelter</a>
+  <a href="#">Volunteer</a>
+  <a href="#">Donate</a>
+  <a href="#">Contact Us</a>
+</div>
+<div style="margin-top: 80px;">
+ <center>
+  <h1>Welcome to <br><b><i>Petify</i></b></h1>
+  <img src="https://media.istockphoto.com/id/1442046417/vector/social-media-post-design-with-pet-adoption-promotion-save-life-adopt-banner-with-cute-dogs.jpg?s=612x612&w=0&k=20&c=_SW-skunyYEao5Ru3xPEzsnIDMs0wJtJ2O8VLj9p3DE=">
+ 
+  <p><h3>Find your new furry friend and give them a forever home!</p></h3>
+ </center>
+</div>
+
+<script>
+  window.onscroll = function() {
+    var navbar = document.getElementById('navbar');
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      navbar.style.backgroundColor = '#2980b9'; 
+    } else {
+      navbar.style.backgroundColor = '#3498db';
+    }
+  };
+</script>
+
+</body>
+</html>
